@@ -36,7 +36,7 @@
  Is it hard to learn? No! Code can look complicated at a glance but if you take the time to break it down piece by piece it's rather simple and follows logical rules.  <br>
  
  Structure of this book: Three sections   <br>
-      Section 1.HTML: first chapter will look at HTML and how its used to create web pages. <br>
+  Section 1.HTML: first chapter will look at HTML and how its used to create web pages. <br>
         you can start by simply writing what you want to appear on your page <br>
         then you add tages or elements to the words so that the browser knows what you want each set of words to be, a heading or a paragraph as an example.  <br>
         the rest of this section will introduce us to the tags at our disposal with HTML <br>
@@ -50,12 +50,12 @@
            * miscellaneous elemets <br>
         these may not be the most exciting but theyre important building blocks <br>
       
-      Section 2. CSS: This section starts with how CS uses rules to style your HTML webpages <br>
+  Section 2. CSS: This section starts with how CS uses rules to style your HTML webpages <br>
         Look at a variety of CSS properties. Generally these properties fall into one of two categories: <br>
              Presentation: How to control things such as color of text, fonts, size of text, background colors, and background images <br>
              Layout: These control where the different elements are positioned on the screen. Making the site more attractive <br>
         
-      Section 3: Practical: The book ends with some helpful info that helps in building better websites.  <br>
+  Section 3: Practical: The book ends with some helpful info that helps in building better websites.  <br>
         Some new tags for HTML5 which help describe the structure of the pages. (HTML5 being the newest version of HTML) <br>
         Before learning this it's important to have a grasp on CSS.  <br>
         These chapters will talk about the design process that I can follow in creating a new site <br>
@@ -94,9 +94,9 @@ How the web works: Communication between your computer and a Domain Name System 
  Chapter One:Structure  <br>
 
 ##### Key Topics:
-            1. Understanding Structure <br>
-            2. Learning about markup <br>
-            3. Tags and Elements  <br>
+   1. Understanding Structure <br>
+   2. Learning about markup <br>
+   3. Tags and Elements  <br>
    
 Many web pages are just electronic versions of documents that have been around for ages. <br>
     Newspapers, Insurance forms, shop catalogues etc.  <br>
@@ -110,7 +110,7 @@ Structure is used to draw the eye to the important information  <br>
 HTML describes the structure of pages <br>
       You can use HTML to create these headings, and the information below each heading <br>
       
-          Example Code: <br>
+   Example Code: <br>
               <htmL>
                 <body>
                   <h1> Heading! </h1>
@@ -122,19 +122,19 @@ HTML describes the structure of pages <br>
                  </body>
                 </html>
        
-       In the angled brackets above you see HTML elements. they're made up of two tags, an opening and a closing tag.  <br>
-       Each element tells the browers something about the info that is between the two tags. <br>
+  In the angled brackets above you see HTML elements. they're made up of two tags, an opening and a closing tag.  <br>
+  Each element tells the browers something about the info that is between the two tags. <br>
        
-       <html></html> are the tages that indicate that anything between these two elements are HTML code <br>
-       <body></body> tag indicates that anything within these elements are shown in the main browser window <br>
-       <h1-6></h1-6> indicate headers. 1 being the largest text, 6 being smallest <br>
-       <p></p> indicate paragraphs <br>
+   < html>< /html> are the tages that indicate that anything between these two elements are HTML code <br>
+   < body>< /body> tag indicates that anything within these elements are shown in the main browser window <br>
+   < h1-6>< /h1-6> indicate headers. 1 being the largest text, 6 being smallest <br>
+   < p>< /p> indicate paragraphs <br>
        
-       <p></p> analysis: <br>
-       < = left angle bracket : Opening of a tag <br>
-       p = character : indicate the tags purpose <br>
-       >  = right angle bracket : closing of a tag <br>
-       / = forward slash : needed to indicate the tag is the end of a set.  <br>
+   < p></p> analysis: <br>
+    < = left angle bracket : Opening of a tag <br>
+    p = character : indicate the tags purpose <br>
+    >  = right angle bracket : closing of a tag <br>
+    / = forward slash : needed to indicate the tag is the end of a set.  <br>
        
  Attributes can tell use more about elements  <br>
       attributes provide additional info about the contents of the element.  <br>
@@ -143,19 +143,19 @@ HTML describes the structure of pages <br>
         2. Value  <br>
           The two parts are separated by an equal sign <br>
          
-            Example Code: <br>
-                <p lang ="en-us"> Paragraph in the english language</p> <br>
+   Example Code: <br>
+     <p lang ="en-us"> Paragraph in the english language</p> <br>
+               
+   lang = attribute name <br>
+   en-us = attribute value  <br>
                 
-                lang = attribute name <br>
-                en-us = attribute value  <br>
-                
-             Alternate example: <br>
+   Alternate example: <br>
                 <p lang="fr">Paragraphe en Francais</p> <br>
                 
-                lang = name <br>
-                fr = value <br>
-                
-                **HTML5 allows yuo to use upercase attribute names and omit the quotemarks but it is best practice to use lowercase and quote marks. <br>
+   lang = name <br>
+   fr = value <br>
+               
+  **HTML5 allows yuo to use upercase attribute names and omit the quotemarks but it is best practice to use lowercase and quote marks. <br>
                 
                 
 Body Head and Title <br>
