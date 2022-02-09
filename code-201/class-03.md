@@ -1,9 +1,11 @@
 # Class 03 Reading Notes
 
 ## HTML and CSS Chapter 3 
+
 Lists <br>
 
 ### Keytopics
+
  * numbered lists
  * bullet lists
  * definition lists
@@ -31,6 +33,7 @@ Definition lists: made up of a set of terms along with the definitions for those
    < / ul >     <br>
 
 ### Chapter 3 Summary 
+
  * There are three types of HTML lists: ordered, unordered and definition
  * Ordered list use numbers
  * Unordered list use bullets
@@ -38,14 +41,17 @@ Definition lists: made up of a set of terms along with the definitions for those
 
 
 ## HTML and CSS Chapter 13
+
 Boxes <br>
 
 ### Key Topics
+
 * Controlling Size of boxes
 * Box model for borderes, margin and padding
 * Displaying and Hiding Boxes 
 
-#### Box Dimensions  <br>
+#### Box Dimensions 
+
   By default boxes are just big enough to hold their contents <br>
   width: controls width of box <br>
   height: controls height of box  <br>
@@ -64,6 +70,7 @@ Boxes <br>
  Padding: space between border of box and any content contained within <br>
  
  <br>
+ 
 #### Border
  
  border-width: control border width, a few ways to do this:  <br>
@@ -114,8 +121,10 @@ Boxes <br>
   Text-align works with center/right/left  <br>
   
    <br>
+
 #### Change inline/block
- With Display!  <br>
+
+With Display!  <br>
  display: inline - act like an inline element <br>
  display: block - act like a block element <br>
  display: inline-block allows block level element to flow like an inline element while retaining other block-level elements <br>
@@ -123,7 +132,8 @@ Boxes <br>
       You can also change visibility of element with command "visibility: hidden or visible;" <br>
       
 #### CSS3 Border image
-  border-image applies image to border of box <br>
+
+border-image applies image to border of box <br>
   Requires three pieces of info:  <br>
   1. URL of img
   2. where to slice img 
@@ -132,7 +142,8 @@ Boxes <br>
   <br>
 
 #### CSS3 Box Shadows 
-  box-shadow allows you to add a drop shadow around a box (works similarly to text-shadow property) <br>
+ 
+ box-shadow allows you to add a drop shadow around a box (works similarly to text-shadow property) <br>
   Horizontal offset: negative values of position to the left of box <br>
   vertical offset: negative value to top of box  <br>
   blur distance: if omitted the shadow is solid like a border  <br>
@@ -140,7 +151,8 @@ Boxes <br>
  <br>
  
 #### CSS3 Rounded corners and Elliptical shapes
-  border-radius: create rounded corners on any box  <br>
+ 
+ border-radius: create rounded corners on any box  <br>
   border-top-right-radius <br>
   border-bottom-right-radius <br>
   border-bottom-left-radius <br>
@@ -152,6 +164,7 @@ Boxes <br>
   
 
 ### Chapter 13 Summary 
+
   * CSS treats eqach HTML element as if it has its own box
   * you can use CSS to control the dimensions of a box
   * You can also control the borders, margins and padding for each box with CSS
@@ -161,6 +174,7 @@ Boxes <br>
   * CSS3 has introduced the ability to create image borders and rounded corners. 
 
 ## JS and jQuery Chapter 4
+
 Switch Statements <br>
 
 A switch statement starts with a variable called the switch value.  <br>
@@ -169,15 +183,18 @@ You'll have a default option that is run if none of the cases match <br>
 If a match is found, then that code is run; then the break statement stops the rest of the switch statements.  <br>
 
 #### Type coercion and Weak Typing
+
 If you use a data type JS doesnt understand it tries its best to understand it instead of erroring.  <br>
     Type coercion : converting data type behind the scenes to complete an operation <br>
     Weak Typing: data type value can change  <br>
     
 #### Truthy and Falsy Values 
+
 Falsy values are treated as if they are false <br>
 Truthy values are treated as if they are true  <br>
 
 #### Loops 
+
 For: if you need to run a code for a specific number of times, the for loop is useful  <br>
       In a for loop the condition is usually a counter which is used to tell how many times the loop should run <br>
 While: if you don't know how manyu times the code will need to run, a while loop is useful.  <br>
@@ -190,10 +207,12 @@ Condition: loop should continue to run until counter reaches a specified number 
 Update: every time a loop has run the statement in curly braces it adds one to the counter (i++)  <br>
 
 #### key loop concepts
+
 break: breaks out of the loop
 continue: tells interpreter to stop current iteration and update and check condition again 
 
 ### Summary for Chapter 4 Switch Satements and Loop
+
   * Switch statements allow you to compare a value against possiblke outcomes (and also provides a default option if none match)
   * Data types can be coerced from one type to another
   * All values evaluate to either truthy or falsy
