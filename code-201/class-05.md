@@ -180,7 +180,7 @@ Three main file types for images are JPEG, PNG and GIF <br>
  2. lossy
     compression is irreversible
  
- #### The three file types
+#### The three file types
   JPEG is a form of lossy compression; takes advantage of human perception.  <br>
   PNG is a lossless img format. no data is lost, retain higher quality  <br>
   GIF is also lossless, PNG compression is 5-25% better than GIF so now GIF is mostly only used for animations  <br>
