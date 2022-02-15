@@ -1,5 +1,7 @@
 # Reading Notes Table of Contents
 
+[Deployed Site](https://eden-brekke.github.io/reading-notes/)
+
 ## Class Code 102 
 [Full Class Reading Notes](code-102/full-reading-notes.md) <br>
 
