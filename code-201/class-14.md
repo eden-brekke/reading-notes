@@ -2,7 +2,11 @@
 
 ## Article [What Google Learned From its Quest to Build the Perfect Team](https://www.nytimes.com/2016/02/28/magazine/what-google-learned-from-its-quest-to-build-the-perfect-team.html)
 
+This article is going into the dynamics of what makes a good team. Google went through and studied a large number of their companies teams in hopes to find a pattern that made it obvious what made a good team. However, with all the data that they collected that didn't find a clear pattern. Through more research the article goes into more specified findings that a good team really has to do with emotional intelligence, and caring for one-another within the team, being friendly and giving everyone a fair chance to speak, leaning on the individuals strengths and using those strengths to create a team where the sum is greater than the parts. Terms they used for good teams are traits like "conversational turn-taking" and "average social sensitivity" (psychological safety). Direct quote "A shared belief held by members of a team that the team is safe for interpersonal risk-taking, a sense of confidence that the team will not embarrass, reject, or punish someone for speaking up. Describes a tea,m climate characterized by interpersonal trust and mutual respect in which people are comfortable being themselves." I think often in my past I've had good group dynamics and I always kind of felt like I was someone who easily over-shared, I've never really felt embarrassed to share what I''m going through, and I didn't realize that this aspect of myself might contribute to how I tend to have good group dynamics. For example in my last job, I definitely 
+
+
 ## Article [CSS Transforms](https://learn.shayhowe.com/advanced-html-css/css-transforms/)
+
 
 ## Article [CSS Transitions and Animations](https://learn.shayhowe.com/advanced-html-css/transitions-animations/)
 
