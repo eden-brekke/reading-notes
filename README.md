@@ -22,6 +22,7 @@
 [Class 14 Reading Notes](code-201/class-14.md) <br>
 
 ## Code 301 - Intermediate Software Development
+[Prep Work Reading Notes](code-301/prep-work-reading.md)
 [Class 01 Reading Notes](code-301/class-01.md) <br>
 [Class 02 Reading Notes](code-301/class-02.md) <br>
 [Class 03 Reading Notes](code-301/class-03.md) <br>
