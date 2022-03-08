@@ -58,6 +58,7 @@ New Reading
 Below you will find some reading material, code samples, and some additional resources that will help you to better understand ES6 Classes
 
 Watch the [Shred Talk: ES6 Classes](https://www.youtube.com/watch?v=9Yc5J3Ap9-4)
+Review the [Demo Code](https://codefellows.github.io/code-301-guide/curriculum/prework/classes/DEMO.html)
 
 ### Free hand notes from the video 
 
@@ -128,12 +129,16 @@ class Animal {
 
 class Dog extends Animal {
   
+  constructor(name, legs, furType){
+    super(name, legs); // run the parent method to create a new instance
+    this.furType = furType; // new attribute that only dogs have
+  }
   speak(){
     console.log('woof!');
   }
 
 }
-let rosie = new Dog ('rosie', 4);
+let rosie = new Dog ('rosie', 4, 'Short Hair');
 rosie.walk();
 rosie.eat();
 console.log(rosie);
@@ -143,7 +148,6 @@ rosie.speak();
 prototypes are much more memory efficient, especially for subclasses. 
 
 
-Review the [Demo Code](https://codefellows.github.io/code-301-guide/curriculum/prework/classes/DEMO.html)
 Complete the [Assignment](https://codefellows.github.io/code-301-guide/curriculum/prework/classes/LAB.html)
 
 ## Objects and Inheritance
@@ -156,7 +160,7 @@ When you use class and extends keywords internally JavaScript will still use pro
 
 ## Prototypal Inheritance
 
-```
+```js
 function Animal(name) {
   this.name = name;
 }
