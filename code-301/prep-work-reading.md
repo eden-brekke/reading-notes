@@ -49,9 +49,7 @@ Make a section in your notes titled ## Things I want to know more about, and any
 ## Things I want to know more about 
 I'm a little uncertain about how to get a react.. file set up, do I need to use a JSX file? Can I just use a JS file? Do I need an html file attached to it, it's specified that DOM manipulation is different than react DOM stuff, but I'm not sure why. I'm also feeling really unclear on what benefit there is to using react to do these simple tasks that are being shown in the examples. Is it just to get us used to using react so that it can be used for more complex functions down the line? can you mix everything we've learned together or 
 
-```
-New Reading
-```
+
 
 # Readings and Resources: ES6 Classes
 
@@ -322,3 +320,23 @@ You might want to return array objects in your derived array class. The species 
 Re-running a class definition <br>
 A class cannot be redefined, attempting to do so will return a syntax error
 <br>
+
+## Notes for The Arrow function Lab 
+
+An arrow function expression is a compact alternative to traditional function expression but is limited and can't be used in every situation. <br>
+<br>
+Differences and limitations <br>
+* does not have its own binding to this or super and should not be used a a method
+* does not have new.target keyword
+* isnt suitable for call, apply and bind methods which rely on an established scope 
+* cant be used as constructors
+* cant use yield within its body
+<br>
+Where function(a){} is the normal way<br>
+(a)=>{} is the arrow way <br>
+<br>
+Arrow functions have three main benefits.
+1. they have concise syntax
+2. they have implicit returns (allowing for nifty one-liners)
+  This means there's no need for the return call (just gotta delete the curly brackets)
+3. they don't rebind the value of this when you use an arrow function inside of another function
