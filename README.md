@@ -23,7 +23,7 @@
 
 ## Code 301 - Intermediate Software Development
 [Introduction to React](code-301/intro-to-react-reading.md)
-[Prep Work Reading Notes](code-301/prep-work-reading.md)
+[Prep Work Reading Notes](code-301/ES6-classes-reading.md)
 [Class 01 Reading Notes](code-301/class-01.md) <br>
 [Class 02 Reading Notes](code-301/class-02.md) <br>
 [Class 03 Reading Notes](code-301/class-03.md) <br>
