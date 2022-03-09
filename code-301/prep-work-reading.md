@@ -19,7 +19,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
   * Ease of deployment - As new compatible versions become available, easier to replace existing versions with no impact on other components or the system
   * Reduce Cost - the use of third party components allows you to spread the cost of development and maintenance 
   * Ease of development - Components implement well-known interfaces to provide defined functionality, allowing development without impact on other parts or system
-  * Reusable - Can be used to spread development and maint cost across several applications or systems
+  * Reusable - Can be used to spread development and maintenance cost across several applications or systems
   * Modification of Technical Complexity - Component modifies the complexity through the use of a component container and its services 
   * Reliability - Overall system reliability increases since each reliability of each individual component enhances reliability of the whole system via reuse. 
   * System Maintenance and Evolution - Easy to change and update the implementation without affecting the rest of the system 
@@ -70,10 +70,10 @@ attributes: nouns, things about you, so for a person, hair color, height, weight
 they also have behaviors: we describe behaviors in code as methods, things you can do, or verbs! things such as the ability to walk 
 
 we can model these out using straight objects, using json directly and also with constructors
-but what we havent done much of is subclassing
-and by subclassing, so using person as example, maybe theres a certain kind of person. so everyones a person but an adult has different features than a child 
+but what we haven't done much of is sub-classing
+and by sub-classing, so using person as example, maybe theres a certain kind of person. so everyone's a person but an adult has different features than a child 
 so in that case you can make a child with special characteristics but is still a person object. this is called inheritance 
-you'll see this with vehciles and stuff (planes, motorcycles etc,) they share some of the same attributes but they can vary widely in some of their behaviors or maybe the presence of absence of some of the attributes
+you'll see this with vehicles and stuff (planes, motorcycles etc,) they share some of the same attributes but they can vary widely in some of their behaviors or maybe the presence of absence of some of the attributes
 
 
 person 
@@ -252,7 +252,7 @@ class keyword can be used to implement classes, and can be used with constructor
 constructor refers to a constructor <br>
 static refers to a method that can be called without instantiating their class and cannot be called through the class instance. often used to create utility functions <br>
 extend inherits a constructors attributes  <br>
-super will also call to a parent construtor within a child constructor  <br>
+super will also call to a parent constructor within a child constructor  <br>
 
 [MDN this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 
@@ -261,7 +261,7 @@ super will also call to a parent construtor within a child constructor  <br>
 A functions this keyword behaves differently in strict mode and non-strict mode <br> 
 in most cases the value of this is determined by how a function is called (runtime binding)  <br>
 ES5 introduced bind() method which sets the value of a functions this regardless of how its called <br> 
-ES2015 introduced arrow functions which dont provide their own this binding (retains the this value of an enclosing lexical context) <br>
+ES2015 introduced arrow functions which don't provide their own this binding (retains the this value of an enclosing lexical context) <br>
 this can refer to a global object, when not in strict mode if it's called within a function it'll reference the global object <br>
 In strict if it's used within a function but not in reference to a object it will return undefined  <br>
 The behavior os this in classes and functions is similar but within a class constructor, this is a regular object. <br> 
@@ -307,7 +307,7 @@ static properties are useful for caches, fixed-configs, or any other data you do
 Binding this with prototype and static methods <br>
 When a static or prototype method is called without a value for this, the this value will be undefined <br>
 <br>
-Subclassing with extends <br>
+Sub-classing with extends <br>
 The extends keyword is used in class declarations or expressions to create a class as a child of another class <br>
 if there is a constructor present in the subclass, it needs to first call super() before using 'this'<br>
 <br>
@@ -328,7 +328,7 @@ An arrow function expression is a compact alternative to traditional function ex
 Differences and limitations <br>
 * does not have its own binding to this or super and should not be used a a method
 * does not have new.target keyword
-* isnt suitable for call, apply and bind methods which rely on an established scope 
+* isn't suitable for call, apply and bind methods which rely on an established scope 
 * cant be used as constructors
 * cant use yield within its body
 <br>
