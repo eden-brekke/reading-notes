@@ -200,7 +200,7 @@ class Animal {
 
 // Thanks to 'extends', all birds can now do all things animals can
 class Bird extends Animal {
-  // Birds can walk, becuase they're animals also do their own thing.
+  // Birds can walk, because they're animals also do their own thing.
   fly() {}
 }
 
@@ -213,6 +213,111 @@ parrot.walk();
 ## Additional Resources
 
 Video: [what the heck is the event loop anyway](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
+#### Notes from the video 
+
+the event loop has one simple job. <br>
+look at the stack (things within the script that have been invoked to run, the stack works by adding things ontop of the stack then popping them off the top when they're done) <br>
+and at the task queue (things to be done) <br>
+and it takes the first thing in the queue <br>
+and pushes it onto the stack. <br>
+You use the built in function setTimeout(which I used for the animations!) in conjunction with the event loop, <br>
+you can use this to defer a function until the stack is clear, so it will run after other things have ran. <br>
+This works because the event loop HAS to wait for the stack to be clear before it can push anything else onto the stack <br>
+You need to be careful about blocking the queue <br>
+Too many animations can be bad if you're not careful, same with image rendering, and you want your website to be fluid. <br>
+
 [MDN inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+
+#### Notes on Inheritance 
+
+When it comes to inheritance, JS only has one construct: objects. <br>
+Each object holds private property which holds a link to other objects called its prototype  <br>
+Prototype object has a property of its own and so on until it hits null.  <br>
+All objects in JS sit just below null on top of the prototype chain  <br>
+<br>
+Inheriting properties - JS objects are dynamic 'bags' of properties.  <br>
+Each object can be linked to a prototype object  <br>
+ <br>
+Inheriting 'methods' - JS does not have 'methods' in the form that class based languages define them  <br>
+in JS any function can be added to an object in the form of a property  <br>
+Inherited functions act just as any other property, overriding methods  <br>
+when an inherited function is executed, the value of 'this' points to the inheriting object, not the prototype object.  <br>
+ <br>
+object.create() calling this method creates a new object.  <br>
+prototypes of this object is the first argument of the function <br>
+ <br>
+You can also use delete and new objects as well in conjunction with create method. 
+ <br>
+class keyword can be used to implement classes, and can be used with constructor, static, extends and super  <br>
+constructor refers to a constructor <br>
+static refers to a method that can be called without instantiating their class and cannot be called through the class instance. often used to create utility functions <br>
+extend inherits a constructors attributes  <br>
+super will also call to a parent construtor within a child constructor  <br>
+
 [MDN this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+
+#### notes on this
+
+A functions this keyword behaves differently in strict mode and non-strict mode <br> 
+in most cases the value of this is determined by how a function is called (runtime binding)  <br>
+ES5 introduced bind() method which sets the value of a functions this regardless of how its called <br> 
+ES2015 introduced arrow functions which dont provide their own this binding (retains the this value of an enclosing lexical context) <br>
+this can refer to a global object, when not in strict mode if it's called within a function it'll reference the global object <br>
+In strict if it's used within a function but not in reference to a object it will return undefined  <br>
+The behavior os this in classes and functions is similar but within a class constructor, this is a regular object. <br> 
+all non-static methods within the class are added to the prototype of this  <br>
+Unlike base class constructors, derived constructors have no initial this binding  <br>
+calling super() creates a this binding within the constructor  <br>
+Within an arrow function this retains the value of the enclosing lexical context's this. in global code it will be set to the global object  <br>
+essentially this is a getter and setter  <br>
+
 [MDN class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+#### notes on classes 
+
+classes are special functions, so just as you can define a function expression and declaration, the class syntax has two components class expressions and class declarations.  <br>
+ <br>
+class declarations: to declare a class you use the class keyword with the name of the class  <br>
+an important difference between function declarations and class declarations is that while functions can be called in code that appears before they are defined, classes must be defined before they can be constructed  <br>
+ <br>
+Class expressions: another way to define a class, can be named or unnamed  <br>
+the name given to a named class expression is local to the class's body, it can be accessed via the name property  <br>
+ <br>
+Class body and method definitions  <br>
+the body of a class is the part thats within the {}  <br>
+This is where you define class members, such as the methods or constructor  <br>
+ <br>
+Strict mode  <br>
+the body of a class is executed in strict mode, code written here is subject to stricter syntax for increased performance  <br>
+ <br>
+Constructor method is a special method for creating and initializing an object created with a class.  <br>
+there can only be one special method with the name constructor in a class.  <br>
+ <br>
+Static initialization blocks  <br>
+Class static initialization blocks allow for flexible initialization of class static properties, <br>
+including the evaluation of statements and granting access to a private scope  <br>
+multiple static blocks can be declared and they can be interleaved with declaration of static properties and methods  <br>
+ <br>
+Static methods and properties <br>
+the static keyword defines a static method or property for a class. <br>
+where static members are called without instantiating their class and cannot be called through a class instance.<br>
+Static methods are used to create utility functions, <br>
+static properties are useful for caches, fixed-configs, or any other data you don't need to be replicated across instances <br>
+<br>
+Binding this with prototype and static methods <br>
+When a static or prototype method is called without a value for this, the this value will be undefined <br>
+<br>
+Subclassing with extends <br>
+The extends keyword is used in class declarations or expressions to create a class as a child of another class <br>
+if there is a constructor present in the subclass, it needs to first call super() before using 'this'<br>
+<br>
+Super class calls with super <br>
+The super keyword is used to call corresponding methods of super class. this is one advantage over prototype-based inheritance <br>
+<br>
+Species <br>
+You might want to return array objects in your derived array class. The species pattern lets you override default constructors <br>
+<br>
+Re-running a class definition <br>
+A class cannot be redefined, attempting to do so will return a syntax error
+<br>
