@@ -149,6 +149,7 @@ prototypes are much more memory efficient, especially for subclasses.
 
 
 Complete the [Assignment](https://codefellows.github.io/code-301-guide/curriculum/prework/classes/LAB.html)
+[Link to my Forked Repl](https://replit.com/@EBrekke/ES6-Classes#vehicles-with-constructor.js)
 
 ## Objects and Inheritance
 
