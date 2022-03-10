@@ -28,10 +28,10 @@ I decided to follow in their footsteps with the ultimate goal of going back into
 ## Gather your assets
 A few punchy images will really help your page stand out, and make it your own. Gather images for the following:
 
-1. A headshot of your lovely face, reduced to 100x100 pixels ![image](images/20220115.141925.jpg) it's me!<br>
-2. A banner of you looking happy, cropped to exactly 1400 × 422 pixels ![image](images/pumpkinbanner.png) it's pumpkin :) <br>
-3. A screenshot of the best-looking part of your favorite previous project, like your Code 201 final project ![image](images/codlehomepage.png) My teams final Code 201 project: CODLE and a round played/results pop up <br>
+1. A headshot of your lovely face, reduced to 100x100 pixels ![image](../../images/20220115_141925.jpg) it's me!<br>
+2. A banner of you looking happy, cropped to exactly 1400 × 422 pixels ![image](../../images/pumpkinbanner.png) it's pumpkin :) <br>
+3. A screenshot of the best-looking part of your favorite previous project, like your Code 201 final project ![image](../../images/codlehomepage.png) My teams final Code 201 project: CODLE and a round played/results pop up <br>
 4. Two or three other nice-looking screenshots, of any other projects you have worked on. Salmon Cookies? Bus Mall? 
-  ![image](images/cookiestand.png) My Salmon Cookies Lab DOM manipulated Table<br>
-  ![image](images/busmall.png) My Bus Mall Results page/chart<br>
-  ![image](images/catfamily.png) My About me Bio and Cat family<br>
+  ![image](../../images/cookiestand.png) My Salmon Cookies Lab DOM manipulated Table<br>
+  ![image](../../images/busmall.png) My Bus Mall Results page/chart<br>
+  ![image](../../images/catfamily.png) My About me Bio and Cat family<br>
