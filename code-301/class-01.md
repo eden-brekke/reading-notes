@@ -47,6 +47,6 @@ Read for understanding the assigned resources for this class. Also skim and book
 Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
 ## Things I want to know more about 
-I'm a little uncertain about how to get a react.. file set up, do I need to use a JSX file? Can I just use a JS file? Do I need an html file attached to it, it's specified that DOM manipulation is different than react DOM stuff, but I'm not sure why. I'm also feeling really unclear on what benefit there is to using react to do these simple tasks that are being shown in the examples. Is it just to get us used to using react so that it can be used for more complex functions down the line? can you mix everything we've learned together or 
+I'm a little uncertain about how to get a react.. file set up, do I need to use a JSX file? Can I just use a JS file? Do I need an html file attached to it, it's specified that DOM manipulation is different than react DOM stuff, but I'm not sure why. I'm also feeling really unclear on what benefit there is to using react to do these simple tasks that are being shown in the examples. Is it just to get us used to using react so that it can be used for more complex functions down the line? can you mix everything we've learned together or is this separate?
 
 
