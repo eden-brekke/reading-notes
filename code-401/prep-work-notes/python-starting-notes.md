@@ -457,3 +457,46 @@ print(4 not in nums)
 print(not 3 in nums)
 print(3 not in nums)
 ```
+
+The append method adds an item to the end of an existing list. <br>
+
+``` python 
+nums = [1, 2, 3]
+nums.append(4)
+print(nums)
+```
+
+To get the number of items in a list you can use the len function <br>
+Unlike the index of items, len doesn't start with 0, so len will return the number 5 for the list below, not 4 <br>
+
+``` python
+nums = [1, 3, 5, 2, 4]
+print(len(nums))
+```
+
+The insert method is similar to append, except it allows you to choose the position you insert into instead of it automating to the end of the list <br>
+
+```python
+words = ["Python", "fun"]
+index = 1
+words.insert(index, "is")
+print(words)
+```
+
+the index method finds the first occurrence of a list item and returns the index <br>
+if the item isn't in a list it raises a ValueError <br>
+
+``` python
+letters = ['p', 'q','r','s','p','u']
+print(letters.index('r'))
+print(letters.index('p'))
+print(letters.index('z'))
+```
+
+A few more useful functions and methods for lists:
+* max(list) returns list item with max value
+* min(list) returns list item with min value
+* list.count(item) returns a count of how many times an item occurs in a list
+* list.remove(item) removes an object from a list
+* list.reverse(): reverses items in a list
+
