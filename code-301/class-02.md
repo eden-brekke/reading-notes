@@ -1,5 +1,5 @@
 # Readings: State and Props
-Below you will find some reading material, code samples, and some additional resources that support today’s topic and the upcoming lecture.
+Below you will find some reading material, code samples, and some additional resources that support today’s topic and the upcoming lecture.<br>
 
 Review the Submission Instructions for guidance on completing and submitting this assignment.
 
@@ -20,8 +20,8 @@ Updates<br>
   This is a method, and it's invoked immediately after a component is mounted. It's used to load anything that uses a network request or initializes the DOM.
 
 ## Additional Resources
-[React Bootstrap Documentation](https://react-bootstrap.github.io/)
-[Netlify](https://www.netlify.com/)
+[React Bootstrap Documentation](https://react-bootstrap.github.io/)<br>
+[Netlify](https://www.netlify.com/) <br>
 
 ## Videos
 [React State Vs Props](https://www.youtube.com/watch?v=IYvD9oBCuJI)
@@ -42,7 +42,7 @@ Updates<br>
 [React Tutorial through ‘Developer Tools’](https://reactjs.org/tutorial/tutorial.html)
 
 ## Assignment Instructions
-Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your Readings Notes Repository that answers each and every question presented above.
+Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your Readings Notes Repository that answers each and every question presented above.<br>
 
 Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
