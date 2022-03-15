@@ -30,9 +30,14 @@
 [Class 04 Reading Notes](code-301/class-04.md) <br>
 [Class 05 Reading Notes](code-301/class-05.md) <br>
 [Class 06 Reading Notes](code-301/class-06.md) <br>
-[]()
-[]()
-[]()
-[]()
+[Class 07 Reading Notes](code-301/class-07.md) <br>
+[Class 08 Reading Notes](code-301/class-08.md) <br>
+[Class 09 Reading Notes](code-301/class-09.md) <br>
+[Class 10 Reading Notes](code-301/class-10.md) <br>
+[Class 11 Reading Notes](code-301/class-11.md) <br>
+[Class 12 Reading Notes](code-301/class-12.md) <br>
+[Class 13 Reading Notes](code-301/class-13.md) <br>
+[Class 14 Reading Notes](code-301/class-14.md) <br>
+[Class 15 Reading Notes](code-301/class-15.md) <br>
 
 ## Code 401 - Advanced Software Development (TBA)
