@@ -47,3 +47,5 @@ Read for understanding the assigned resources for this class and watch any assig
 Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
 ## Things I want to know more about
+
+No extra questions but I'm pretty eager to see props and states in action more. 
