@@ -65,6 +65,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 ## Things I want to know more about
 I'm not sure I completely understand the map() method in conjunction with jsx and how it's different from vanilla js. I'd like to touch on this more. 
+Like-wise I feel pretty unsure about the videos content, in theory it makes sense but the terminology and what is parent vs child component is kind of tripping me up. I think in this case repetition will be key. Just keep swimmin. 
 
 ## Bookmark/Skim
 [React Tutorial through ‘Declaring a Winner’](https://reactjs.org/tutorial/tutorial.html)
