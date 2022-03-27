@@ -26,9 +26,6 @@ Review the Submission Instructions for guidance on completing and submitting thi
 ### Bookmark/Skim
 [Auth0 for single page apps](https://auth0.com/docs/libraries/auth0-react)
 
-## Assignment Instructions
-Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your Readings Notes Repository that answers each and every question presented above.
 
-Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
 ## Things I want to know more about

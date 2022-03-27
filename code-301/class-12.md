@@ -30,9 +30,6 @@ Videos
 * What does a 500 error status code mean?
 * What is the difference between a status 200 and a status 201?
 
-## Assignment Instructions
-Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your Readings Notes Repository that answers each and every question presented above.
 
-Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
 ## Things I want to know more about

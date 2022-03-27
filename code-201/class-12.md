@@ -361,7 +361,9 @@ function draw() {
 ```
 ![image](https://user-images.githubusercontent.com/85004124/155045548-19c3e3eb-d089-409e-aa6c-a9216b696d70.png)
 <br>
+
 #### Arcs
+
 ```js
 function draw() {
   var canvas = document.getElementById('canvas');
@@ -390,8 +392,10 @@ function draw() {
   }
 }
 ```
+
 ![image](https://user-images.githubusercontent.com/85004124/155045569-083b7107-3698-4064-a02b-0da938b18117.png)
 <br>
+
 #### Quadratic Bezier Curves
 
 ```js
@@ -415,6 +419,7 @@ function draw() {
 ```
 ![image](https://user-images.githubusercontent.com/85004124/155045603-68e5c84a-8ca2-4176-9188-82899efc3755.png)
 <br>
+
 #### Cubic Bezier Curves
 
 ```js
@@ -553,6 +558,7 @@ globalAlpha = transparencyValue <br>
 #### Line width: 
 ![image](https://user-images.githubusercontent.com/85004124/155045998-3f083f1d-26d2-4241-8e78-1569073a3254.png)
 <br>
+
 #### Line caps:
 butt: end at end points <br>
 round: rounded ends <br>

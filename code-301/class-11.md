@@ -4,7 +4,7 @@ Below you will find some reading material, code samples, and some additional res
 Review the Submission Instructions for guidance on completing and submitting this assignment.
 
 ## Reading
-[nosql vs sql](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool)
+[NoSQL vs SQL](https://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/?utm_source=tuicool)
 Fill in the chart below with five differences between SQL and NoSQL databases:
 
 

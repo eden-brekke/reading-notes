@@ -19,9 +19,5 @@ Ask the question: [Why diversity matters to your tech company](https://www.usato
 * Why do diverse companies perform better?
 * Give an example of how a diverse company can serve a diverse user base or vise-versa.
 
-## Assignment Instructions
-Read for understanding the assigned resources for this class and watch any assigned videos. Also skim and bookmark the additional resources provided. Prepare an entry for your Readings Notes Repository that answers each and every question presented above.
-
-Make a section in your notes titled ## Things I want to know more about, and anytime a question arises in your mind, or something catches your curiosity, write it down under this heading.
 
 ## Things I want to know more about
