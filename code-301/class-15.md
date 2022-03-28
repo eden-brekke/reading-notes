@@ -29,7 +29,7 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 * What is the difference between authorization and authentication?
 |Authentication|Authorization|
-|:---:|:---:|
+|:--:|:--:|
 |Determines whether users are who they say they are|Determines what users can and can't access|
 |Challenges user to validate creds|Verifies whether access is allowed through policies/rules|
 |Usually done before authorization|Done after successful authentication|
