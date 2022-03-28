@@ -27,9 +27,10 @@ Review the Submission Instructions for guidance on completing and submitting thi
 
 [Authorization and Authentication flows](https://auth0.com/docs/get-started/authentication-and-authorization-flow)
 
-* What is the difference between authorization and authentication?
+* What is the difference between authorization and authentication? <br>
+
 |Authentication|Authorization|
-|:--:|:--:|
+|:---:|:---:|
 |Determines whether users are who they say they are|Determines what users can and can't access|
 |Challenges user to validate creds|Verifies whether access is allowed through policies/rules|
 |Usually done before authorization|Done after successful authentication|
