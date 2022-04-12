@@ -32,12 +32,12 @@ elements can get distorted or transformed on both 2D and 3D planes. <br>
 
 <br>
 
-```
+```html
  HTML Code Example:
  
 <figure class="box-1">Box 1</figure>
 <figure class="box-2">Box 2</figure>
-
+```
 
 CSS Code Example:
 
@@ -55,14 +55,14 @@ CSS Code Example:
 Using the scale value within the transform property allows you to change the appeared size of an element. Default is 1 <br>
 
 HTML Code:
-```
+```html
 HTML: 
 
 <figure class="box-1">Box 1</figure>
 <figure class="box-2">Box 2</figure>
-
+```
 CSS:
-
+```css
 .box-1 {
   transform: scale(.75);
 }
@@ -75,13 +75,13 @@ CSS:
 Translate value works a bit like relative positioning, pushing and pulling an element in different directions without interrupting the normal flow.<br>
 
 HTML Code:
-```
+```html
 <figure class="box-1">Box 1</figure>
 <figure class="box-2">Box 2</figure>
 <figure class="box-3">Box 3</figure>
-
+```
 CSS:
-
+```css
 .box-1 {
   transform: translateX(-10px);
 }
@@ -97,11 +97,12 @@ CSS:
 Used to distort elements on x and y axes <br>
 HTML Code:
 
-```
+```html
 <figure class="box-1">Box 1</figure>
 <figure class="box-2">Box 2</figure>
 <figure class="box-3">Box 3</figure>
-
+```
+```css
 .box-1 {
   transform: skewX(5deg);
 }
@@ -118,27 +119,30 @@ Common for multiple transforms to be used at once, rotating and scaling the size
 Using multiple transform declarations will not work, each declaration will overwrite the one above it.  So instead:
 
 HTML Code: 
-```
+```html
 <figure class="box-1">Box 1</figure>
 <figure class="box-2">Box 2</figure>
-
+```
 CSS
+```css
 .box-1 {
   transform: rotate(25deg) scale(.75);
 }
 .box-2 {
   transform: skew(10deg, 20deg) translateX(20px);
 }
-
+```
 Combining it all into a 2D Cube!
 HTML :
+```html
 <div class="cube">
   <figure class="side top">1</figure>
   <figure class="side left">2</figure>
   <figure class="side right">3</figure>
 </div>
-
+```
 CSS: 
+```css
 .cube {
   position: relative;
 }
@@ -294,7 +298,7 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 ## Article [8 simple CSS3 Transitions that will wow users](https://www.webdesignerdepot.com/2014/05/8-simple-css3-transitions-that-will-wow-your-users)
 
 ### 1. Fade in: having things fade in is pretty common 
-```
+```css
 .fade
 {
         opacity:0.5;
@@ -305,15 +309,15 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 }
 ```
 
-2. Change Color
-```
+### 2. Change Color
+```css
 .color:hover
 {
         background:#53a7ea;
 }
 ```
 ### 3. Grow and Shrink 
-```
+```css
 .grow:hover
 {
         -webkit-transform: scale(1.3);
@@ -329,7 +333,7 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 }
 ```
 ### 4. Rotate Elements 
-```
+```css
 .rotate:hover
 {
         -webkit-transform: rotateZ(-30deg);
@@ -338,14 +342,14 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 }
 ```
 ### 5. Square to Circle
-```
+```css
 .circle:hover
 {
         border-radius:50%;
 }
 ```
 ### 6. 3D shadow
-```
+```css
 .threed:hover
 {
         box-shadow:
@@ -357,7 +361,7 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 }
 ```
 ### 7. Swing
-```
+```css
 @-webkit-keyframes swing
 {
     15%
@@ -434,7 +438,7 @@ animation-name, duration, timing-function, delay, iteration-count, direction, fi
 }
 ```
 ### 8. Inset Border
-```
+```css
 .border:hover
 {
         box-shadow: inset 0 0 0 25px #53a7ea;
