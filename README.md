@@ -41,3 +41,6 @@
 [Class 15 OAuth, Authorization/Authentication Flow](code-301/class-15.md) <br>
 
 ## Code 401 - Advanced Software Development Python
+[Prep Work Command Line](code-401/prep-work-notes/401-prep-the-command-line.md) <br>
+[Prep Work Mindset](code-401/prep-work-notes/prep-your-mindset.md) <br>
+[Prep Work SoloLearn Notes](code-401/prep-work-notes/python-starting-notes.md) <br>
