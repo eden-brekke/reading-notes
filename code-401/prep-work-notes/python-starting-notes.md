@@ -1222,3 +1222,1274 @@ with open("filename.txt") as f:
   print(f.read())
 ```
 
+
+## Half way done! You got this :)
+
+## More Types
+
+The *none* object is used to represent the absence of a value 
+
+it's similar to null in other programming languages
+
+similar to other empty values (0 [] '') it registers as False  
+and it will display as an empty string within the python console
+
+The none object is returned by any function  that doesn't explicitly return anything else
+
+```py
+def some_func():
+  print("Hi")
+
+var = some_func()
+print(var)
+```
+
+## Dictionaries 
+
+dictionaries are data structures used to map arbitrary keys to values
+
+lists can be thought of as dicitonaries with integer keys within a certain range 
+
+dictionaries can be indexed in the same way as lists, using square brackets containing keys
+
+```py
+ages = {"Dave":24, "Mary":42, "John":58}
+print(ages["Dave"])
+print(ages["Mary"])
+```
+ 
+each element in a dictionary is represented by a key:value pair
+
+trying to index a key that isnt part of the dictionary returns a *KeyError*
+
+```py
+primary = {
+  "red": [255,0,0],
+  "green":[0,255,0],
+  "blue":[0,0,255],
+}
+
+print(primary["red"])
+print(primary["yellow"]) # KeyError
+```
+
+only immutable objects can be used as keys to dictionaries
+
+immutable objects are those that can't be changed
+
+so far the only mutable objects we've seen are lists and dictionaries 
+
+trying to use a mutable object as a dictionary key will cause a *TypeError*
+
+```py
+bad_dict = {
+  [1,2,3]: "one two three", #type error
+}
+```
+
+just like lists, dictionary keys can be assigned to different values 
+
+however, unlike lists, a new dictionary key can also be assigned a value, not just ones that already exist 
+
+```py
+squares = {
+  1:1,
+  2:4,
+  3:"error",
+  4:16,
+}
+
+square[8] = 64
+square[3] = 9
+print(squares)
+```
+
+to determine whether a key is in a dictionary you can use *in* and *not in* just as you can for a list
+
+```py
+nums = {
+  1: "one",
+  2: "two",
+  3: "three",
+}
+print(1 in nums)
+print("three" in nums)
+print(4 not in nums)
+```
+
+a useful dictionary method is "get" 
+it does the same thing as indexing but if the key isnt found it returns another specified value
+
+```py
+pairs = {
+  1: "apple",
+  "orange": [2,3,4],
+  True: False,
+  None: "True",
+}
+
+print(pairs.get("orange"))
+print(pairs.get(7)) # return none
+print(pairs.get(12345, "not in dictionary")) #return not in dictionary
+```
+
+## Tuples
+
+Tiples are very similar to lists, except that they are immutable (can't be changed)
+
+and they are created using parentheses instead of square brackets
+
+```py
+words = ("spam","eggs","sausage",)
+print(words[0])
+words[1] = "cheese" # will through a TypeError since it's immutable
+```
+
+tuples can be created without the parentheses by just separating the values with commas
+
+```py
+my_tuple = "one","two","three"
+print(my_tuple[0])
+tpl=() # creates an empty tuple
+```
+
+tuples are faster than lists but cant be changed
+
+## List Slices
+
+list slices provide a more advanced way to retrieving values from a list
+
+basic list slicing involves indexing a list with two colon-separated integers
+
+this returns a new list containing all the values in the old list between the indices 
+
+```py
+squares = [0,1,4,9,16,25,36,49,64,81]
+print(squares[2:6])
+print(squares[3:8])
+print(squares[0:1])
+# these wont include the last indexes number in the print
+```
+
+if the first num in a slice is omitted it is taken to be the start of the list
+
+if the second number is omitted it is taken to be the end
+
+```py
+squares = [0,1,4,9,16,25,36,49,64,81]
+print(squares[:7]) # 0 1 4 9 26 25 36
+print(squares[7:]) # 49 64 81
+```
+
+slicing can also be done on tuples
+
+list slices can also have a third number, representing the step to include only alternate values in the slice
+
+```py 
+squares = [0,1,4,9,16,25,36,49,64,81]
+print(squares[::2]) # 1 9 25 49 81
+print(squares[2:8:3]) # 4 25
+```
+
+Negative values can be used in list slicing (and normal list indexing) when negative values are used for the first and second values in a slice (or a normal index) they count from the end of the list 
+
+```py
+squares = [0,1,4,9,16,25,36,49,64,81]
+print(squares[1:-1])
+```
+
+if a negative value is used for the step  
+the slice is done backwards  
+using [::-1] as a slice is a common and idiomatic way to reverse a list 
+
+## List Comprehensions 
+
+List comprehensions are a useful way of quickly creating lists whose contents obey a simple rule 
+
+```py
+# a list comprehension
+cubes = [i**3 from i in range(5)]
+print(cubes)
+```
+
+i*2 for i in range(10) will APPARENTLY list all even numbers between 0 and 18 which makes no sense to me 
+but I guess i * 2 means 10 * 2 = 20 and since the last number isnt included thats 0-18 but also only even numbers because of the 2..?
+
+A list comprehension can also contain an if statement to enforce a condition on values in the list
+
+```py
+evens = [i**2 for i in range(10) if i**2 % 2 == 0]
+print(evens)
+```
+
+Trying to create a list in a v extensive range will result in a *MemoryError* 
+
+this code shows an example where the list comprehension runs out of memory 
+
+```py
+even = [2*i for i in range (10**100)]
+```
+
+## String Formatting
+
+so far to combine strings and non-strings you've converted the non-strings to strings and added them
+
+string formatting provides a more powerful way to embed non-strings within strings
+
+string formatting uses a strings format method to substitute a number of arguments in the string
+
+```py 
+# string formatting
+nums = [4,5,6]
+msg = "Numbers : {0} {1} {2}". format(nums[0], nums[1], nums[2])
+print(msg)
+```
+
+string formatting can also be done with named arguments 
+
+```py
+a = "{x}, {y}".format(x=5, y=12)
+print(a)
+```
+
+## String Functions
+
+pythong contains many built in functions 
+
+join = join a list of strings with another string as a separator  
+replace = replace on substring in a string with another  
+startswith and endswith = determine if there is a substring at the start and end of a string  
+lower and upper = to change the case of a string  
+split = split a list of strings with a separator  
+
+```py
+print(", ".join(["spam", "eggs", "ham"]))
+
+print("Hello ME".replace("ME", "world"))
+
+print("This is a sentence.".startswith("This"))
+
+print("This is a sentence.".endswith("sentence."))
+
+print("This is a sentence.".upper())
+
+print("AN ALL CAPS SENTENCE.".lower())
+
+print("spam, eggs, ham".split(", "))
+```
+
+## Numeric Functions 
+
+to find the maximum or minimum of some numbers in a list you can use max and min
+
+to find the distance of number from 0 (absolute value) you can use abs
+
+to round a num to a certain num of decimal places use round
+
+to find the total of a list use sum
+
+```py
+print(min(1,2,3,4,0,2,1))
+print(max[1,4,9,2,5,6,8])
+print(abs(-99))
+print(abs(42))
+print(sum([1,2,3,4,5]))
+```
+
+## List functions 
+
+conditional statements
+all and any take a list as an argument and return True or all or any arguments evaluate to true (or false)
+
+the function enumerate can be used to iterate through the values and indices of a list simultaneously
+
+```py
+nums = [55,44,33,22,11]
+
+if all([i>5 for i in nums]):
+  print("All larger than 5")
+
+if any([i%2 == 0 for i in nums]):
+  print("at least one is even)
+
+for v in enumerate(nums):
+  print(v)
+```
+
+## Test Analyzer
+
+example projet showing a program that analyzes a sample file to find what percentage of the text each character occupies
+
+this section shows how a file could be open and read
+
+```py
+filename = input("Enter a filename: ")
+
+with open(filename) as f:
+  text = f.read()
+
+print(text)
+```
+
+this part of the program shows a function that counts how many times a character occurs in a string
+
+```py
+def count_char(text, char):
+  count = 0
+  for c in text:
+    if c == char:
+      count += 1
+  return count
+```
+
+this func takes text of the file and one character as its arguments  
+returning the num of times that char appears in the text 
+
+next call it for the file
+
+```py
+filename = input("Enter a filename: ")
+with open(filename) as f:
+  text = f.read()
+
+print(count_char(text, "r"))
+```
+
+the next part of the program finds what percentage of the text each character of the alphabet occupies
+
+```py
+for char in "abcdefghijklmnopqrstuvwxyz":
+  perc = 100 * count_char(text, char)/len(text)
+  print("{0}-{1}%".format(char, round(perc,2)))
+```
+
+so all together the program is:
+
+```py
+nums = [55,44,33,22,11]
+
+if all([i>5 for i in nums]):
+  print("All larger than 5")
+
+if any([i%2 == 0 for i in nums]):
+  print("at least one is even)
+
+for v in enumerate(nums):
+  print(v)
+  
+filename = input("Enter a filename: ")
+with open(filename) as f:
+  text = f.read()
+
+print(count_char(text, "r"))
+
+for char in "abcdefghijklmnopqrstuvwxyz":
+  perc = 100 * count_char(text, char)/len(text)
+  print("{0}-{1}%".format(char, round(perc,2)))
+```
+
+## Functional Programming 
+
+a style of programming that is based around functions 
+
+a key part of functional programming (higher-order functions)
+
+higher-order functions take other functions as arguments or return them as results
+
+```py
+def apply_twice(func, arg):
+  return func(func(arg))
+
+def add_five(x):
+  return x + 5
+
+print(apply_twice(add_five, 10))
+```
+
+## Pure Functions 
+
+functional programming seeks to use pure functions
+
+pure functions have no side effects and return a value that depends only on their arguments 
+
+this is how functions in math work: for example, the cos(x) will for the same value of x alawys return the same result 
+
+pure function: 
+
+```py
+def pure_function(x,y):
+  temp = x +2*y
+  return temp/(2*x+y)
+```
+
+impure function:
+
+```py
+some_list = []
+
+def impure(arg):
+  some_list.append(arg)
+```
+
+Using pure functions has both advantages and disadvantages
+
+pure functions are :
+
+* easier to reason about and test
+* more efficient. Once the function has been evaluated for an input, the result can be stored and referred to the next time the function of that input is needed, reducing the number of times the function is called. This is called *memorization*
+* easier to run in parallel
+
+The main disadvantage of using only pure functions is that they majorly complicate the task of I/O since this appears to inherently require side effects and they can be more difficult to write in some situations 
+
+## Lambdas 
+
+you can create an anonymous function using lambda syntax  
+this approach is most commonly used when passing a simple func as an argument to another function
+
+syntax is shown in the next example and consists of the lambda keyword follow by arguments a colon and the expression to evaluate/return
+
+```py
+def my_func(f, arg):
+  return f(arg)
+
+my_func(lambda x: 2*x*x, 5)
+```
+
+
+lambda functions arent as powerful as named functions
+
+can only do things that require a single expression (single line of code)
+
+```py
+def polynomial(x):
+  return x**2 + 5*x + 4
+print(polynomial(-4))
+
+print((lambda x: x**2 + 5*x + 4) (-4))
+```
+
+lambda can be assigned to variables and used like normal functions
+
+```py
+double = lambda x: x*2
+print(double(7))
+```
+
+
+## map 
+
+built in map and filter are useful for higher order functions that operate on lists (iterable objects too)
+
+function map takes a function and an iterable as an argument and returns new iterable with function applied to each argument 
+
+```py
+def add_five(x):
+  return x + 5
+
+nums = [11, 22, 33, 44, 55]
+results = list(map(add_five, nums))
+print(results)
+```
+
+can also use lambda syntax
+
+```py 
+nums= [11,22,33,44,55]
+results = list(map(lambda x: x+5, nums))
+print(results)
+```
+
+filter filters iterable by removing items that don't match a predicate 
+
+```py
+nums = [11,22,33,44,55]
+res = list(filter(lambda x: x%2==0, nums))
+print(res)
+```
+
+like map the results need to explicitly be converted to list to print it
+
+## generators
+
+generators are a type of iterable, like lists or tuples
+
+unlike lists, they dont allow indexing with arbitrary indices, but they can still be iterated through with for loops  
+they can be created using functions and the yield statement
+
+```py
+def countdown():
+  i=5
+  while i > 0:
+    yield i
+    i -= 1
+
+for i in countdown():
+  print(i)
+```
+
+the yield statement is used to define a generator, replacing the return of a function to provide a result to its called without destroying local variables
+
+due to the fact that they yield one item at a time, generators dont have the memory restrictions of lists, so they can be infinite
+
+```py
+def infinite_sevens():
+  while True:
+    yield 7
+
+for i in infinite_sevens():
+  print(i)
+```
+
+finite generators can be converted into lists by passing them as arguments to the list function
+
+```py
+def numbers(x):
+  for i in range(x):
+    if i % 2 == 0:
+      yield i
+
+print(list(numbers(11)))
+```
+
+## Decorators 
+
+provide a way to modify functions using other functions
+
+ideal when need to extend functionality of functions that you dont want to directly modify
+
+```py
+def decor(func):
+  def wrap():
+    print("==========")
+    func()
+    print("==========")
+  return wrap
+
+def print_text():
+  print("hello")
+
+decorated = decor(print_text)
+decorated()
+```
+
+
+define decor func w/ single param func
+
+inside decor define nested func: wrap
+
+wrap prints string, calls func, prints string
+
+decor returns wrap  
+decoreated = decor(print_text)  
+where print_text is func  
+so string func string is printed when decorated is called
+
+@my_dec will have the same effect as: my_func = my_dec(my_func)
+
+## Recursion
+
+Recursion is a very important concept in functional programming
+
+the fundamental part of recursion is self-reference - function calling themselves
+
+classic example is factorial function 
+
+```py
+def factorial(x):
+  if x == 1:
+    return 1
+  else: 
+    return x * factorial(x-1)
+
+print(factorial(5))
+```
+
+base case acts as the exit condition of the recursion
+
+recursive functions can be infinite, which occur when you forget to implement the base case
+
+below is an incorrect version of the factorial function
+
+has no base case so it runs until the interpreter runs out of memory and crashes
+
+```py
+def factorial(x):
+  return x * factorial(x-1)
+print(factorial(5))
+```
+
+recursion can also be indirect
+
+one function can call a second, which calls the first, which calls the second, repeat.
+
+```py
+def is_even(x):
+  if x == 0: 
+    return True
+  else: 
+    return is_odd(x-1)
+
+def is_odd(x):
+  return not is_even(x)
+
+print(is_odd(17))
+print(is_even(23))
+```
+
+## Sets
+
+sets are data structures, similar to lists or dictionaries 
+
+they are created using curly braces or the set function
+
+they share some functionality with lists 
+
+such as the use of *in* to check whether they contain a particular item
+
+```py
+num_set = {1,2,3,4,5}
+word_set = set(["spam","eggs","sausage"])
+
+print(3 in num_set)
+print("spam" not in word_set)
+```
+
+sets differ from lists in several ways, but share several list operations such as len
+
+they are unordered, which means that they can't be indexed
+
+they cannot contain duplicate elements
+
+due to the way they're stored, it's faster to check whether an item is part of a set, rather than part of a list
+
+instead of using append to add to a set, use add
+
+the method remove removes element from a set, pop removes an arbitrary element
+
+```py
+nums = {1,2,1,3,1,4,5,6}
+print(nums)
+nums.add(-7)
+nums.remove(3)
+print(nums)
+```
+
+sets can be combined using math operations  
+union operator | combines two sets  
+intersection opertor & gets items that are in both sets  
+difference operator - gets items in first but not second set  
+symmetric difference operator ^ gets items in either set but not both  
+
+## Data Structures 
+
+Python supports: lists dictionaries, tuples, sets
+
+When to use a dictionary:
+
+* when you need a logical association between key:value pair
+* when you need fast lookup for data, based on custom key
+* when your data is being constantly modified. since they're mutable
+
+When to use other types: 
+
+* use lists if you have a collection of data that does not need random access.
+  * try to choose lists when you need a simple, iterable collection that is modified frequently
+* use a set if you need uniqueness for the elements
+* use tuples when your data cannot change
+
+Many times tuple are used in combination with dictionary: for example a tuple could be a key since it is immutable
+
+## itertools
+
+itertools is a standard library containing functions
+
+one type of function is infinite iterators  
+function count counts up infinitely from value  
+function cycle infinitely iterates through an iterable 
+repeat repeats an object either infinitely or specific number of times
+
+```py
+from itertools import count
+
+for i in count(3):
+  print(i)
+  if i >= 11:
+    break
+```
+
+many functions in itertool operate on iterables similar to map and filter  
+takewhile - takes an item from interable while predicate function remains true  
+chain - combines several iterables into one long one;  
+accumulate - returns a running total of values in an iterable  
+
+```py
+from itertools import accumulate, takewhile
+
+nums = list(accumulate(range(8)))
+print(nums)
+print(list(takewhile(lambda x: x<=6, nums)))
+```
+
+several combinatoric functions in itertool such as product and permutation
+
+```py
+from itertools import product, permutations
+
+letters = ("A", "B")
+print(list(product(letters, range(2))))
+print(list(permutations(letters)))
+```
+
+## Classes
+
+popular paradigm is object-oriented programming  
+objects are created using classes which are the focal point of OOP
+
+class describes what the object will be
+
+```py
+class Cat:
+  def __init__(self, color, legs):
+    self.color = color
+    self.legs = legs
+
+felix = Cat("ginger", 4)
+rover = Cat("dog-colored",4)
+stumpy = Cat("brown",3)
+```
+
+__init__ method is most important method in a class
+
+called when object of the class is created
+
+all methods have a self as first parameter 
+self refers to the instance calling the method
+
+instances of a class have attributes
+
+Cat instance have attributes of color and legs and cab be accessed by putting a dot  
+self.attribute
+
+
+```py
+class Cat:
+  def __init__(self, color, legs):
+    self.color = color
+    self.legs = legs
+
+felix = Cat("ginger", 4)
+print(felix.color)
+```
+
+## Method
+
+classes can have other methods defined to add functionality to them 
+
+```py
+class Dog: 
+  def __init__(self, name, color):
+    self.name = name
+    self.color = color
+
+  def bark(self):
+    print("woof")
+
+fido = Dog("Fido", "brown")
+print(fido.name)
+fido.bark()
+```
+
+classes can also have class attributes which are shared by all instances of the class
+
+```py
+class Dog: 
+  legs = 4
+  def __init__(self, name, color):
+    self.name = name
+    self.color = color
+
+  def bark(self):
+    print("woof")
+
+fido = Dog("Fido", "brown")
+print(fido.legs)
+print(Dog.legs)
+```
+
+trying to access an attribute of an instance thaht isnt defined causes an AttributeError and applies when you call an undefined method
+
+```py
+class Rectangle:
+  def __init__(self, width, height):
+    self.width = width
+    self.height = height
+
+rect = Rectangle(7,8)
+print(rect.color) # AttributeError
+```
+
+## Inheritance 
+
+inheritance provides a way to share functionality between classes
+
+```py
+class Animal:
+  def __init__(self, name, color):
+    self.name = name
+    self.color = color
+
+class Cat(Animal):
+  def purr(self):
+    print("Purr..")
+
+class Dog(Animal):
+  def bark(self):
+    print("woof")
+  
+fido = Dog("Fido","brown")
+print(fido.color)
+fido.bark()
+```
+
+class that inherit from another class are called subclass
+and the class that was inherited from is called superclass
+
+```py
+class Wolf:
+  def __init__(self,name,color):
+    self.name = name
+    self.color = color
+
+  def bark(self):
+    print("grrr")
+
+class Dog(Wolf):
+  def bark(self):
+    print("woof")
+
+husky = Dog("Max", "grey")
+husky.bark()
+```
+
+inheritance can also be indirect, but circular inheritance is not possible
+
+```py
+class A: 
+  def method(self):
+    print("A method")
+
+class B(A):
+  def another_method(self):
+    print("B method")
+
+class C(B):
+  def third_method(self):
+    print("C method")
+
+c = C()
+c.method()
+c.another_method()
+c.third_method()
+```
+
+function super is an inheritance related function referring to the parent class
+
+```py
+class A:
+  def spam(self):
+    print(1)
+
+class B(A):
+  def spam(self):
+    print(2)
+    super().spam()
+
+B().spam()
+```
+
+## Magic Methods
+
+special methods with double underscores  
+also known as dunders  
+example: __init__
+
+common use of them is operator overloading  
+this means defining operators for custom classes that allow operators such as + and * to be used on them  
+example: __add__ and +
+
+```py
+class Vector2D:
+  def __init__(self, x,y):
+    self.x = x
+    self.y = y
+  def __add__(self, other):
+    return Vector2D(self.x + other.x, self.y + other.y)
+
+first = Vector2D(5, 7)
+second = Vector2D(3, 9)
+result = first + second
+print(result.x)
+print(result.y)
+```
+
+the __add__ method allows for the definition of a custom behavior for the + operator in our class
+
+all methods start and end with __
+
+* sub for -
+* mul for * 
+* truediv for /
+* floor div for //
+* mod for % 
+* pow for ** 
+* and for &
+* xor for ^ 
+* or for |
+
+so x + y would be x.__add__(y)
+but if x hasn't implmeneted add and x and y are diff types then y.__radd__(x) can be called 
+there are equivalent r methods for all methods above
+
+
+```py
+class SpecialString: 
+  def __init__(self, cont):
+    self.cont = cont
+  
+  def __truediv__(self, other):
+    line = "=" * len(other.cont)
+    return "\n".join([self.cont, line, other.cont])
+  
+spam = SpecialString("spam")
+hello = SpecialString("hello")
+print(spam/hello)
+```
+
+A() ^ B() will evaluate B().__rxor__(A()) so long as A doesnt implement any magic methods
+
+Python provides some magic methods for comparisons too
+
+* lt for <
+* le for <=
+* eq for ==
+* ne for !=
+* gt for >
+* ge for >=
+
+```py
+class SpecialString:
+  def __init__(self, cont):
+    self.cont = cont
+
+  def __gt__(self, other):
+    for index in range(len(other.cont)+1):
+      result = other.cont[:index] + ">" + self.cont
+      result += ">" + other.cont[index:]
+      print(result)
+
+spam = SpecialString("spam")
+eggs = SpecialString("eggs")
+spam > eggs
+```
+
+more methods
+
+* len for len()
+* getitem for indexing
+* setitem for assigning index
+* delitem for deleting indexed value
+* iter for iteration over objects
+* contains for in
+
+```py
+class VagueList:
+  def __init__(self, cont):
+  self.cont = cont
+
+  def __getitem__(self, index):
+    return self.cont[index + random.randint(-1,1)]
+
+  def __len__(self):
+    return random.randit(0, len(self.cont)*2)
+
+vague_list = VagueList(["A","B","C","D","E"])
+print(len(vague_list))
+print(len(vague_list))
+print(vague_list[2])
+print(vague_list[2])
+```
+
+above len() is overridden for the class VagueList to return a random number  
+indexing function also returns a random item in a range from the list, based on the expression 
+
+## Object Lifecycle 
+
+the lifecycle of an object is made up of its creation, manipulation and destruction  
+the first stage is the definition  
+then instantiation  
+then the object is ready for use
+
+other code can interact with the object by calling functions on it and accessing its attributes, then it can be destroyed
+
+when an object is destroyed, the memory allocated to it is freeee
+
+destruction of an object occurs when its reference count reaches zero  
+reference count is the number of variables and other elements that refer to an object  
+if nothing is referring to it, nothing can interact with it and it can be deleted  
+
+The del statement reduces the reference count of an object by one  
+magic method ```__del__```
+
+when an objects reference count reaches zero pythong automatically deletes it 
+
+```py
+a = 42 # create object
+b = a # increase ref count
+c = [a] # increase ref count again
+
+del a # decrease ref count
+b = 100 # decrease ref count
+c[0] = -1 # decrease ref count
+```
+
+
+## Data Hiding
+
+key part of OOP is encapsulation which involves packaging of related variables and functions into easy to use object  
+data hiding states that implementation details of a class should be hidden and a clean standard interface be presented for those using the class 
+
+weakly private methods and attributes have a single underscore at the beginning 
+
+its only actual effect is tht from module_name import * wont import variables that start with a single underscore
+
+```py
+class Queue: 
+  def __init__(self, contents):
+    self._hiddenlist = list(contents)
+  
+  def push(self, value):
+    self._hiddenlist.insert(0,value)
+  
+  def pop(self):
+    return self._hiddenlist.pop(-1)
+  
+  def __repr__(self):
+    return "Queue({})".format(self._hiddenlist)
+
+queue = Queue([1,2,3])
+print(queue)
+queue.push(0)
+print(queue)
+queue.pop()
+print(queue)
+print(queue._hiddenlist)
+```
+
+in the code above, the attribute _hiddenlist is marked as private, but can still be accessed in the outside code 
+__repr __ method is used for string rep of the instance
+
+strongly private methods have double underscores  
+purpose is to avoid bugs if there are subclasses that have methods or attributes with same name  
+
+the method __privatemethod of class Spam could be accessed external with _Spam__privatemethod
+
+```py
+class Spam:
+  __egg = 7
+  def print_egg(self):
+    print(self.__egg)
+
+s = Spam()
+s.print__egg()
+print(s_Spam__egg)
+print(s.__egg)
+```
+
+## Class Methods 
+
+class methods are different, called by class which is passed to cls parameter of the method  
+common use of these are factory methods which instantiate an instance of a class using diff parameters than those usually passed to the class constructor  
+class methods are marked with a classmathod decorator
+
+```py
+class Rectangle: 
+  def __init__(self, width, height):
+    self.width = width
+    self.height = height
+  
+  def calculate_area(self):
+    return self.width * self.height
+  
+  @classmethod
+  def new_square(cls, side_length):
+    return cls(side_length, side_length)
+
+square = Rectangle.new_square(5)
+print(square.calculate_area())
+```
+
+new_square is a class method and is called on the class rather than on the instance of the class. returns a new object of the class cls
+
+## Static methods
+
+static methods are similar to class methods except they don't receive any additional arguments  
+they are identical to normal functions that belong to a class  
+they are marked with the staticmetho decorator
+
+```py
+class Pizza: 
+  def __init__(self, toppings):
+    self.toppings = toppings
+
+  @staticmethod
+  def validate_topping(topping):
+    if topping == "pineapple":
+      raise ValueError("No Pineapples")
+    else:
+      return True
+
+ingredients = ["cheese", "onions", "spam"]
+if all(Pizza.validate_topping(i) for i in ingredients):
+  pizza = Pizza(ingredients)
+```
+
+static methods behave like plain functions, except for the fact that you can call them from an instance of the class 
+
+## Properties 
+
+properties provide a way of customizing access to instance attributes  
+created by putting property decorator above a method  
+properties make an attribute read-only
+
+```py
+class Pizza:
+  def __init__(self, toppings):
+    self.toppings = toppings
+  
+  @property
+  def pineapple_allowed(self):
+    return False
+
+pizza = Pizza(["cheese","tomato"])
+print(pizza.pineapple_allowed)
+pizza.pineapple_allowed = True
+```
+
+properties can be set by defining setter/getter functions  
+setter sets the corresponding property's value  
+getter gets the value
+
+```py
+class Pizza: 
+  def __init__(self, toppings):
+    self.toppings = toppings
+    self._pineapple_allowed = False
+
+  @property
+  def pineapple_allowed(self):
+    return self._pineapple_allowed
+  
+  @pineapple_allowed.setter
+  def pineapple_allowed(self, value):
+    if value:
+      password = input("enter password: ")
+      if password == "Sw0rdf1sh!":
+        self._pineapple_allowed = value
+      else:
+        raise ValueError("Alert! Intruder!")
+
+pizza = Pizza(["cheese","tomato"])
+print(pizza.pineapple_allowed)
+pizza.pineapple_allowed = True
+print(pizza.pineapple_allowed)
+```
+
+## a simple game
+
+old fashioned text-based adventure game 
+
+```py
+def get_input():
+  command = input(": ").split()
+  verb_word = command[0]
+  if verb_word in verb_dict:
+    verb = verb_dict[verb_word]
+  else: 
+    print("Unknown verb {}". format(verb_word))
+    return
+  
+  if len(command) >= 2:
+    noun_word = command[1]
+    print(verb(noun_word))
+  else:
+    print(verb("nothing"))
+  
+def say(noun):
+  return 'You said "{}"'.format(noun)
+
+verb_dict = {
+  "say": say,
+}
+
+while True:
+  get_input()
+
+class GameObject:
+  class_name = ""
+  desc = ""
+  objects = {}
+
+  def __init__(self, name):
+    self.name = name
+    GameObject.objects[self.class_name] = self
+  
+  def get_desc(self):
+    return self.class_name + "\n" + self.desc
+  
+class Goblin(GameObject):
+  def __init__(self, name):
+  self.class_name = "goblin"
+  self.health = 3
+  self._desc = "A cute creature"
+  super().__init__(name)
+
+  @property
+  def desc(self):
+    if self.health >=3:
+      return self._desc
+    elif self.health == 2:
+      health_line = "it has a wound on its knee"
+    elif self.health == 1:
+      health_line = "its left arm has been cut off"
+    elif self.health <=0:
+      health_line = "its dead"
+    return self._desc + "\n" + health_line
+  
+  @desc.setter
+  def desc(self, value):
+    self._desc = value
+
+def hit(noun):
+  if noun in GameObject.objects: 
+    thing = GameObject.objects[noun]
+    if type(thing) == Goblin:
+      thing.health = thing.health - 1
+      if thing.health <=0:
+        msg = "yOu killed the goblin"
+      else:
+        msg = "ou hit the {}".format(thing.class_name)
+  else: 
+    msg = "There is no {} here.".format(noun)
+  return msg
+
+goblin = Goblin("Gobbly")
+
+def examine(noun):
+  if noun in GameObject.objects:
+    return GameObject.objects[noun].get_desc()
+  else: 
+    return "There is no {} here.".format(noun)
+
+
+```
+
