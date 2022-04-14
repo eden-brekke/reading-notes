@@ -2493,3 +2493,399 @@ def examine(noun):
 
 ```
 
+## Regular Expressions
+
+powerful tool for various kinds of string manipulation
+
+domain specific language (DSL) that is present as a library  
+two main tasks:
+
+* verifying strings match a pattern
+* performing substitutions in a string (such as changing american spellings to british ones)
+
+can be accessed using the re module  
+after defining an re the re.match function can be used to determine whether it matches at the beginning of the string
+
+```py
+import re
+pattern = r"spam"
+
+if re.match(pattern, "spamspamspam"):
+  print("match")
+else:
+  print("no match")
+```
+
+other match patterns are  
+re.search which finds a match of a pattern anywhere in the string  
+re.findall which returns a list of all substrings that match a pattern
+
+```py
+import re
+pattern = r"spam"
+
+if re.match(pattern, "eggspamsausagespam"):
+  print("match")
+else:
+  print("no match")
+
+if re.search(patter, "eggspamsausagespam"):
+  print("match")
+else: 
+  print("no match")
+
+print(re.findall(pattern, "eggspamsausagespam"))
+```
+
+regex search returns an object  
+group returns a string  
+start and end return starting/ending position of the first match  
+span returns the start and end positions of first match as a tuple
+
+```py
+import re
+
+pattern=r"spam"
+match = re.search(pattern, "eggspamsausage")
+if match:
+  print(match.group())
+  print(match.start())
+  print(match.end())
+  print(match.span())
+```
+
+## Search and Replace
+
+```py
+re.sub(pattern, repl, string, count = 0)
+```
+
+```py
+import re
+str = "My name is David. Hi David"
+pattern = r"David"
+newstr = re.sub(pattern, "Amy", str)
+print(newstr)
+```
+
+## Metacharacters
+ 
+are what make re more powerful than normal string methods
+
+first metacharacters : .(dot) which matches any character other than a new line 
+the ^ matches start 
+the $ matches end 
+
+```py
+import re 
+
+pattern = r"^gr.y$"
+
+if re.match(pattern, "grey"):
+  print("Match 1")
+if re.match(pattern, "gray"):
+  print("Match 2")
+if re.match(pattern, "blue"):
+  print("Match 3")
+
+if re.match(pattern, "stingray"):
+  print("Match 4")
+```
+
+## Character Classes 
+
+provide a way to match only one of the specific set of characters  
+character class is created by putting the character it matches inside square brackets
+
+```py
+import re
+pattern = r"[aeiou]"
+
+if re.search(pattern, "grey"):
+  print("Match 1")
+
+if re.search(pattern, "qwertyuiop"):
+  print("Match 2")
+
+if re.search(pattern, "rhythm myths"):
+  print("Match 3")
+```
+
+the pattern [aeiou] in the search function matches all strings that cointain any one of the characters defined
+
+character classes can also match ranges of characters 
+[a-z] any lower
+[G-P] any upper from G to P
+[0-9] any digit 
+and multiple ranges can be included [A-Za-z]
+
+```py
+import re
+pattern = r"[A-Z][A-Z][0-9]"
+
+if re.search(pattern, "LS8"):
+  print("Match 1")
+
+if re.search(Patter, "E3"):
+  print("Match 2")
+
+if re.search(pattern, "1ab"):
+  print("Match 3")
+```
+
+place a ^ at the start of a character class to inert it  
+this causes it to match any character other than the ones included  
+
+```py
+import re
+pattern = r"[^A-Z]"
+
+if re.search(pattern, "this is all quiet"):
+  print("Match1")
+
+if re.search(pattern, "AbCdEfG123"):
+  print("Match2")
+  
+if re.search(pattern, "THISISALLSHOUTING"):
+  print("Match3")
+```
+  
+more metacharacters are * + ? {and}
+
+where * means zero or more reptitions 
+
+```py
+import re
+pattern = r"egg(spam)*"
+
+if re.match(pattern, "egg"):
+  print("Match1")
+  
+if re.match(pattern, "eggspamspamegg"):
+  print("Match2")
+  
+if re.match(pattern, "spam"):
+  print("Match3")
+```
+
+and + is similar meaning one or more repeitions 
+
+pattern = r"g+"
+
+the ? means zero or one repetitions 
+
+```py
+import re
+pattern = r"ice(-)?cream"
+
+if re.match(pattern, "ice-cream"):
+   print("Match1")
+
+if re.match(pattern, "icecream"):
+   print("Match2")
+
+if re.match(pattern, "sausage"):
+   print("Match3")
+
+if re.match(pattern, "ice--ice"):
+   print("Match4")
+```
+
+curly braces can be used to represent the number of repetitions between two num  
+regex{x,y} means between x and y reps of something
+so {0,1} means the same thing as ?
+if first num is missing its taken to mean 0 and if second num is missing its taken as infinity  
+
+## Groups
+
+can be created by surrounding part of a re with parenths
+this means a group can be given as an argument to metacharacters such as * and ?
+
+```py
+import re 
+pattern = r"egg(spam)*"
+
+if re.match(pattern, "egg"):
+  print("Match 1")
+if re.match(pattern, "eggspamspamspamegg"):
+  print("Match 2")
+
+if re.match(pattern, "spam"):
+  print("Match 3")
+```
+
+contents of groups in match can be accessed using group()  
+group() and group(0) return whole match 
+group(n) returns nth group from left
+
+```py
+import re
+pattern = r"a(bc)(de)(f(g)h)i"
+
+match = re.match(papttern, "abcdefghijklmnop")
+if match:
+  print(match.group())
+  print(match.group(0))
+  print(match.group(1))
+  print(match.group(2))
+  print(match.groups())
+```
+
+named groups have format (?P<name>...) where name is the name of the group and ... is the content  
+non-capturing groups have the format (?:...) are not accessible by group method so they can be added to an existing re qithout breaking the numbering
+
+```py
+import re
+pattern = r"(?P<first>abc)(?:def)(ghi)"
+
+match = re.match(pattern, "abcdefghi")
+if match:
+  print(match.group("first"))
+  print(match.groups())
+```
+
+
+important metacharacter is | and it means or
+
+```py
+import re 
+pattern = r"gr(a|e)y"
+
+match = re.match(pattern, "gray")
+if match:
+  print("Match 1")
+
+match = re.match(pattern, "grey")
+if match: 
+  print("Match 2")
+
+match = re.match(pattern, "griy")
+if match: 
+  print("Match 3")
+```
+
+## Special sequence 
+
+they are written as a backslash followed by another character
+
+```py
+import re
+pattern=r"(.+) \1"
+
+match = re.match(pattern, "word word")
+if match:
+  print("match 1")
+
+match = re.match(pattern, "?! ?!")
+if match:
+  print("match 2")
+
+match = re.match(pattern, "abc cde")
+if match:
+  print("match 3")
+```
+
+more special sequence are 
+
+* \d for digits 
+* \s for whitespace
+* \w for word character 
+
+the above sequences can be written with uppercase which means the opposite so \D would mean anything but a digit
+
+```py
+import re
+pattern = r"(\D+\d)"
+
+match = re.match(pattern, "Hi 999!")
+if match:
+  print("match 1")
+
+match = re.match(pattern, "1, 23, 465!")
+if match:
+  print("match 2")
+
+match = re.match(pattern, " ! $?")
+if match:
+  print("match 3")
+```
+
+special sequence \A for beginning of string \Z to match end of string \b to match an empty string between \w and \W or \w and the beginning or end of a string (boundary between words) \B matches empty string elsewhere
+
+```py
+import re
+pattern = r"\b(cat)\b"
+match = re.search(pattern, "the cat sat")
+if match:
+  print("match 1")
+
+match = re.search(pattern, "we s>cat<tered?")
+if match:
+  print("match 2")
+
+match = re.search(pattern, "We scattered")
+if match:
+  print("match 3")
+```
+
+## zen of python
+
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+
+## PEP
+
+python enhancement proposal 
+
+- modules should have short, all-lowercase names;
+- class names should be in the CapWords style;
+- most variables and function names should be lowercase_with_underscores;
+- constants (variables that never change value) should be CAPS_WITH_UNDERSCORES;
+- names that would clash with Python keywords (such as 'class' or 'if') should have a trailing underscore
+- lines shouldn't be longer than 80 characters;
+- 'from module import *' should be avoided;
+- there should only be one statement per line.
+
+python allows to have function with varying num of arguments
+
+*args as a func param enables you to pass an arbitrary num   
+so you could pass *args then when you invoke pass any number of args  
+
+*args inside a function is accessed as the tuple of args
+
+**kwards stands for keyword arguments allows you to handle arguments that have not defined in advance
+
+tuple unpacking allows you to assign each item in an iterable to a variable
+ 
+a variable that is prefaced with an asterisk takes all values from the interable that are left over from other variables
+
+ternary operator  
+provides funationality of is statement with less code 
+
+else statement is most commonly used along with if
+but it can also follow a for or while loop which give it diff meanings
+
+else statements can also be used with try/except statements 
+
+__ main __  ensure it wont be run if the file is imported
+
+Django: The most frequently used web framework written in Python, Django powers websites that include Instagram and Disqus. It has many useful features, and whatever features it lacks are covered by extension packages.
