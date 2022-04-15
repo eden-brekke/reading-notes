@@ -1,5 +1,7 @@
 # Reading
 
+Welcome to Python 401! This will talk about the course as a whole. Big O Notation and some tips about python as a language. 
+
 [Pain and Suffering](https://codefellows.github.io/code-401-python-guide/curriculum/class-01/notes/pain_suffering)
 
 The price of taking Code 401 which is 2 years worth of knowledge from a university is: pain :) 
