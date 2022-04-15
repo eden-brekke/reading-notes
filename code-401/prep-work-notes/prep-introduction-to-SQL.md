@@ -62,6 +62,7 @@ WHERE condition
 We use the AND or OR logical keywords to make the search more complex.  
 
 Some Useful Operators:  
+
 | Operator| Condition | SQL Example |
 |:-------|:--------:|------:|
 |=,!=,<,<=,>,>=|Standard numerical Operators|col_name !=4|
