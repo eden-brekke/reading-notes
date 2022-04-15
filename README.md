@@ -44,6 +44,7 @@
 [Prep Work Command Line](code-401/prep-work-notes/401-prep-the-command-line.md) <br>
 [Prep Work Mindset](code-401/prep-work-notes/prep-your-mindset.md) <br>
 [Prep Work SoloLearn Notes](code-401/prep-work-notes/python-starting-notes.md) <br>
+[Prep Work Introduction to SQL](code-401/prep-work-notes/prep-introduction-to-SQL.md) <br>
 [Class 01 Beginning Python](code-401/class-01.md) <br>
 [Class 02 Recursion](code-401/class-02.md) <br>
 [Class 03 Read and Write Python Files](code-401/class-03.md) <br>
