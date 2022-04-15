@@ -44,3 +44,4 @@
 [Prep Work Command Line](code-401/prep-work-notes/401-prep-the-command-line.md) <br>
 [Prep Work Mindset](code-401/prep-work-notes/prep-your-mindset.md) <br>
 [Prep Work SoloLearn Notes](code-401/prep-work-notes/python-starting-notes.md) <br>
+[Prep Work Introduction to SQL](code-401/prep-work-notes/prep-introduction-to-SQL.md) <br>
