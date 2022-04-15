@@ -44,3 +44,40 @@
 [Prep Work Command Line](code-401/prep-work-notes/401-prep-the-command-line.md) <br>
 [Prep Work Mindset](code-401/prep-work-notes/prep-your-mindset.md) <br>
 [Prep Work SoloLearn Notes](code-401/prep-work-notes/python-starting-notes.md) <br>
+[Class 01 Beginning Python](code-401/class-01.md) <br>
+[Class 02 Recursion](code-401/class-02.md) <br>
+[Class 03 Read and Write Python Files](code-401/class-03.md) <br>
+[Class 04 Classes Objects and Fixtures](code-401/class-04.md) <br>
+[Class 05 Linked Lists](code-401/linked-lists.md) <br>
+[Class 06 Random](code-401/class-06.md) <br>
+[Class 07 Python scope](code-401/class-07.md) <br>
+[Class 08 List Comprehension and Debugging](code-401/class-08.md) <br>
+[Class 09 Statistics](code-401/class-09.md) <br>
+[Class 10 Stacks & Queues](code-401/stacks-and-queues.md) <br>
+[Class 11 Data Analysis](code-401/class-11.md) <br>
+[Class 12 Pandas](code-401/class-12.md) <br>
+[Class 13 Linear Regressions](code-401/class-13.md) <br>
+[Class 14 Data Visualization](code-401/class-14.md) <br>
+[Class 15 Tress](code-401/trees.md) <br>
+[Class 16 Serverless Functions](code-401/class-16.md) <br>
+[Class 17](code-401/class-17.md) <br>
+[Class 18](code-401/class-18.md) <br>
+[Class 19](code-401/class-19.md) <br>
+[Class 26](code-401/class-26.md) <br>
+[Class 27](code-401/class-27.md) <br>
+[Class 28](code-401/class-28.md) <br>
+[Class 29](code-401/class-29.md) <br>
+[Class 30 Hash Tables](code-401/hash-tables.md) <br>
+[Class 31](code-401/class-31.md) <br>
+[Class 32](code-401/class-32.md) <br>
+[Class 33](code-401/class-33.md) <br>
+[Class 34](code-401/class-34.md) <br>
+[Class 35 Graphs](code-401/graphs.md) <br>
+[Class 36](code-401/class-36.md) <br>
+[Class 37](code-401/class-37.md) <br>
+[Class 38](code-401/class-38.md) <br>
+[Class 39](code-401/class-39.md) <br>
+[Class 40](code-401/class-40.md) <br>
+[Class 41](code-401/class-41.md) <br>
+[Class 42](code-401/class-42.md) <br>
+[Class 43 OSS Contributions](code-401/class-43-OSS-Contributions.md) <br>
