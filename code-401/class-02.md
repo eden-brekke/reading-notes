@@ -1,5 +1,8 @@
 # Reading
 
+Why does this matter? Recursion is a fun new way to make our code cleaner and solves some problems that we've encountered and solved through iteration in a fun new way. So Fresh. So Clean.
+
+
 [In Tests We Trust - TDD with Python](https://code.likeagirl.io/in-tests-we-trust-tdd-with-python-af69f47e6932)
 
 Unit testing are pieces of code to exercise the input, output and behavior of the code.  
