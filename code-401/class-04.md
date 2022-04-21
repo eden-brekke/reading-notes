@@ -57,7 +57,21 @@ Example of a list as a recursive data type:
 
 1. Start with an empty list, then generate the list by recursively applying the attach_head function
 2. Recursion can also be seen as self-referential function compositions. Apply a function to an argument then pass the result as an argument to a second application of the same function and so on. 
+
 [Pytest Fixtures and Coverage](https://www.linuxjournal.com/content/python-testing-pytest-fixtures-and-coverage)
+
+Two Pytest features: 
+
+Fixtures:  
+You define fixtures using a combination of the pytest.fixture decorator along with a function definition.  
+Fixtures are used differently from global variables. You can mention the fixture in the test's parameter list.  
+Then inside the test you can access the fixture by name.  
+Fixtures can make calculations and decisions like a function (because it is a function under the hood)  
+
+Coverage:  
+Coverage is used to ensure you're testing as many cases as you can for your code.  
+You can add code coverage to pytest with a package called pytest-cov on PyPI  
+then you can invoke pytest with the --cov option. 
 
 ### Bookmark and Review
 
