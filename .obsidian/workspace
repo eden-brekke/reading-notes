@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "code-401/stacks-and-queues.md",
+            "file": "code-401/class-11.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "e38820144b41998b",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "code-401/stacks-and-queues.md",
+                "file": "code-401/class-11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +90,7 @@
   },
   "active": "f0a021720c0173bd",
   "lastOpenFiles": [
+    "code-401/class-11.md",
     "code-401/stacks-and-queues.md",
     "code-401/class-09.md",
     "code-401/class-17.md"
