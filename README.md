@@ -61,7 +61,7 @@
 [Class 14 Data Visualization](code-401/class-14.md) <br>
 [Class 15 Tress](code-401/trees.md) <br>
 [Class 16 Serverless Functions](code-401/class-16.md) <br>
-[Class 17](code-401/class-17.md) <br>
+[Class 17 Web Scraping](code-401/class-17.md) <br>
 [Class 18](code-401/class-18.md) <br>
 [Class 19](code-401/class-19.md) <br>
 [Class 26](code-401/class-26.md) <br>
