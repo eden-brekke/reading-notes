@@ -64,10 +64,10 @@
 [Class 17 Web Scraping](code-401/class-17.md) <br>
 [Class 18 Cryptography](code-401/class-18.md) <br>
 [Class 19 Automation](code-401/class-19.md) <br>
-[Class 26](code-401/class-26.md) <br>
-[Class 27](code-401/class-27.md) <br>
-[Class 28](code-401/class-28.md) <br>
-[Class 29](code-401/class-29.md) <br>
+[Class 26 Intro to Django](code-401/class-26.md) <br>
+[Class 27 Django Models](code-401/class-27.md) <br>
+[Class 28 Django CRUD and Forms](code-401/class-28.md) <br>
+[Class 29 Django Custom User](code-401/class-29.md) <br>
 [Class 30 Hash Tables](code-401/hash-tables.md) <br>
 [Class 31](code-401/class-31.md) <br>
 [Class 32](code-401/class-32.md) <br>
