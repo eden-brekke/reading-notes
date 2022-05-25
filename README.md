@@ -69,7 +69,7 @@
 [Class 28 Django CRUD and Forms](code-401/class-28.md) <br>
 [Class 29 Django Custom User](code-401/class-29.md) <br>
 [Class 30 Hash Tables](code-401/hash-tables.md) <br>
-[Class 31](code-401/class-31.md) <br>
+[Class 31 Django REST Framework and Docker](code-401/class-31.md) <br>
 [Class 32](code-401/class-32.md) <br>
 [Class 33](code-401/class-33.md) <br>
 [Class 34](code-401/class-34.md) <br>
