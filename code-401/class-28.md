@@ -145,7 +145,7 @@ def renew_book_librarian(request, pk):
 ```
 
 and Template: 
-```python
+```django
 {% extends "base_generic.html" %}
 
 {% block content %}
