@@ -70,15 +70,15 @@
 [Class 29 Django Custom User](code-401/class-29.md) <br>
 [Class 30 Hash Tables](code-401/hash-tables.md) <br>
 [Class 31 Django REST Framework and Docker](code-401/class-31.md) <br>
-[Class 32](code-401/class-32.md) <br>
-[Class 33](code-401/class-33.md) <br>
-[Class 34](code-401/class-34.md) <br>
+[Class 32 Permissions and Postgresql](code-401/class-32.md) <br>
+[Class 33 Authentication and Production Server](code-401/class-33.md) <br>
+[Class 34 API Deployment](code-401/class-34.md) <br>
 [Class 35 Graphs](code-401/graphs.md) <br>
-[Class 36](code-401/class-36.md) <br>
-[Class 37](code-401/class-37.md) <br>
-[Class 38](code-401/class-38.md) <br>
-[Class 39](code-401/class-39.md) <br>
+[Class 36 DSA Review](code-401/class-36.md) <br>
+[Class 37 React 1](code-401/class-37.md) <br>
+[Class 38 React 2](code-401/class-38.md) <br>
+[Class 39 React 3](code-401/class-39.md) <br>
 [Class 40](code-401/class-40.md) <br>
-[Class 41](code-401/class-41.md) <br>
-[Class 42](code-401/class-42.md) <br>
+[Class 41 React 4](code-401/class-41.md) <br>
+[Class 42 Pythonisms](code-401/class-42.md) <br>
 [Class 43 OSS Contributions](code-401/class-43-OSS-Contributions.md) <br>
