@@ -144,24 +144,7 @@ def renew_book_librarian(request, pk):
     return render(request, 'catalog/book_renew_librarian.html', context)
 ```
 
-and Template: 
-```django
-{% extends "base_generic.html" %}
 
-{% block content %}
-  <h1>Renew: {{ book_instance.book.title }}</h1>
-  <p>Borrower: {{ book_instance.borrower }}</p>
-  <p{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{ book_instance.due_back }}</p>
-
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-    {{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
-  </form>
-{% endblock %}
-```
 
 
 HoooooBoy this is a long one, I think I get the jist but I think this is definitely one that I'll have to come back and reference. 
