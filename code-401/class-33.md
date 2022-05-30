@@ -96,6 +96,24 @@ To use it you need to:
 
 [Django Runserver Is Not Your Production Server](https://build.vsupalov.com/django-runserver-in-production/)
 
+We've been using python manage.py runserver as though it's our production server 
+but the docs are clear:
+"Do not use this server in a production setting, it has not gona through security audit or performance tests"
+
+So what is the right approach to this?  
+A production stack.
+A production setup usually consists of multiple components, each designed and built to be a really good at one specific thing. Fast, reliable and focused. 
+
+How does Django Fit in?
+Your django app does not actually run as you would think a server would. 
+it's not waiting for requests and reacting to them. 
+Your project provides a uwsgi.py file, which contains a function to be called by the application server, this function gets a python object representing the incoming request. 
+the function calls your code, and produces a response object which is passed to the WSGI server. 
+there the response is translated into a HTTP response and is passed back to the web server, which is then delivered to the user. 
+
+So if you want to run Django in production you should use a production-ready server like Nginx and let your app by handled by a WSGI app server like gunicorn
+
+
 ## Videos
 
 Optional: [JWT with DRF](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
