@@ -40,7 +40,11 @@ export async function getStaticProps({ params }) {
 }
 ```
 
+
+
 ![](https://nextjs.org/static/images/learn/dynamic-routes/how-to-dynamic-routes.png)
+
+
 ```python
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory);
