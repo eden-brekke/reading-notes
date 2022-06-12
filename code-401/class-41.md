@@ -24,22 +24,6 @@ You should also update the following files:
 -   `const name = '[Your Name]'` in `components/layout.js` with your name.
 -   `<p>[Your Self Introduction]</p>` in `pages/index.js` with your self introduction.
 ![](https://nextjs.org/static/images/learn/dynamic-routes/page-path-external-data.png)
-```python
-import Layout from '../../components/layout';
-
-export default function Post() {
-  return <Layout>...</Layout>;
-}
-
-export async function getStaticPaths() {
-  // Return a list of possible value for id
-}
-
-export async function getStaticProps({ params }) {
-  // Fetch necessary data for the blog post using params.id
-}
-```
-
 
 
 ![](https://nextjs.org/static/images/learn/dynamic-routes/how-to-dynamic-routes.png)
