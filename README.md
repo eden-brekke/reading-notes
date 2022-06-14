@@ -81,4 +81,5 @@
 [Class 40](code-401/class-40.md) <br>
 [Class 41 React 4](code-401/class-41.md) <br>
 [Class 42 Pythonisms](code-401/class-42.md) <br>
+[Class 42 Ethics in Tech](code-401/class-42-Ethics-in-Tech.md) <br>
 [Class 43 OSS Contributions](code-401/class-43-OSS-Contributions.md) <br>
